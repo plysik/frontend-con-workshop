@@ -1,28 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Counter, Form, WindowMeasure } from "./components";
+import { useToggle } from "./hooks";
+import "./App.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+const App = () => {
+  const toggle = useToggle(true);
+
+  return (
+    <div className="App">
+      <div>
+        <button onClick={toggle.inverse}>
+          {!toggle.value ? "Show" : "Hide"} counter
+        </button>
+        {toggle.value && <Counter />}
       </div>
-    );
-  }
-}
+      <WindowMeasure />
+      <Form />
+    </div>
+  );
+};
 
 export default App;
