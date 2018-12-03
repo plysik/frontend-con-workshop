@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useInput } from "../hooks";
-import { UserContext } from "../managers/UserManager";
+import { UserContext } from "../managers";
 
 export default function Form() {
   const name = useInput("");

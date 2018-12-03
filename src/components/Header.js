@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { UserContext } from "../managers/UserManager";
+import { UserContext } from "../managers";
 
 export default function Header() {
   const { user } = useContext(UserContext);

@@ -1,22 +1,15 @@
 import React from "react";
-import { Counter, Form, WindowMeasure, Header, Footer } from "./components";
-import { useToggle } from "./hooks";
+import { Form, WindowMeasure, Header, Footer } from "./components";
 import "./App.css";
-import UserManager from "./managers/UserManager";
+import { UserManager } from "./managers";
+import Toggle from "./components/Toggle";
 
 const App = () => {
-  const toggle = useToggle(true);
-
   return (
     <UserManager>
       <Header />
       <div className="App">
-        <div>
-          <button onClick={toggle.inverse}>
-            {!toggle.value ? "Show" : "Hide"} counter
-          </button>
-          {toggle.value && <Counter />}
-        </div>
+        <Toggle />
         <WindowMeasure />
         <Form />
       </div>
