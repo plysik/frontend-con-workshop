@@ -33,3 +33,25 @@
     transform: rotate(360deg);
   }
 }
+.select {
+  border: 3px solid black;
+  border-radius: 3px;
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 100px;
+}
+
+.option {
+  padding: 3px;
+  cursor: pointer;
+}
+.option--selected {
+  background-color: turquoise;
+}
+.option + .option {
+  border-top: 1px solid red;
+}
+
+.toggle {
+  min-width: 250px;
+}

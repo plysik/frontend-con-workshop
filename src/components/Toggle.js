@@ -5,7 +5,7 @@ import Counter from "./Counter";
 export default function Toggle() {
   const toggle = useToggle(true);
   return (
-    <div>
+    <div className="toggle">
       <button onClick={toggle.inverse}>
         {!toggle.value ? "Show" : "Hide"} counter
       </button>
